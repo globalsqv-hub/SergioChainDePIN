@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Cyberpunk Palette - HSL Space Separated */
+  
+  /* Backgrounds: Deep space/void black */
+  --background: 220 40% 4%;     /* #050a10 - Very Dark Blue */
+  --foreground: 210 20% 98%;    /* #f0f4f8 - Off white */
+  
+  /* Cards: Glassy dark blue */
+  --card: 220 35% 8%;           /* Slightly lighter than BG */
+  --card-foreground: 210 20% 98%;
+  
+  /* Popovers */
+  --popover: 220 35% 8%;
+  --popover-foreground: 210 20% 98%;
+  
+  /* Primary: Neon Cyan */
+  --primary: 180 100% 50%;      /* #00f0ff */
+  --primary-foreground: 220 40% 4%;
+  
+  /* Secondary: Neon Green */
+  --secondary: 157 100% 50%;    /* #00ff9d */
+  --secondary-foreground: 220 40% 4%;
+  
+  /* Accent: Electric Purple */
+  --accent: 266 100% 64%;       /* #a64aff - Adjusted for visibility */
+  --accent-foreground: 210 20% 98%;
+  
+  /* Muted elements */
+  --muted: 215 25% 15%;
+  --muted-foreground: 215 20% 65%;
+  
+  /* Destructive */
+  --destructive: 0 100% 60%;
+  --destructive-foreground: 210 20% 98%;
+  
+  /* Borders: Subtle electric blue */
+  --border: 215 25% 15%;
+  --input: 215 25% 15%;
+  --ring: 180 100% 50%; /* Primary color for focus rings */
+  
+  /* Radius */
+  --radius: 0.5rem;
+
+  /* Fonts */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+    /* Fixed background image handling */
+    background-image: linear-gradient(to bottom, rgba(5, 10, 16, 0.92), rgba(5, 10, 16, 0.98)), url("@assets/Fondo1_1770920301492.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight;
+  }
+}
+
+/* Custom Cyberpunk Utilities */
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px hsla(var(--primary), 0.5);
+  }
+  
+  .border-glow {
+    box-shadow: 0 0 10px hsla(var(--primary), 0.3), inset 0 0 5px hsla(var(--primary), 0.1);
+  }
+
+  .glass-panel {
+    @apply bg-card/60 backdrop-blur-md border border-white/5;
+  }
+  
+  .neon-border-hover {
+    @apply transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_15px_rgba(0,240,255,0.3)];
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
