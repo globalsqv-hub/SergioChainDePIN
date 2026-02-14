@@ -50,11 +50,9 @@ export function EarnRow({ opportunity }: EarnRowProps) {
         </div>
       </div>
 
-      {/* Action */}
-      <div className="mt-4 sm:mt-0 w-full sm:w-auto flex-shrink-0">
-        <Button className="w-full sm:w-auto bg-white/5 hover:bg-primary hover:text-background text-white border border-white/10 hover:border-primary/50 transition-all duration-300 font-semibold group-hover:shadow-[0_0_15px_rgba(0,240,255,0.2)]">
-          Empezar <ArrowRight className="ml-2 w-4 h-4" />
-        </Button>
+      {/* Info labels */}
+      <div className="mt-4 sm:mt-0 w-full sm:w-auto flex-shrink-0 text-right">
+        <span className="text-xs text-muted-foreground italic">Información del Proyecto</span>
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ export function Navbar() {
               <img src={logo} alt="Logo" className="h-full w-full object-cover" />
             </div>
             <span className="font-display text-xl font-bold tracking-tight text-white">
-              DePIN<span className="text-primary">Hub</span>
+              Sergio<span className="text-blue-500">Chain</span> DePIN
             </span>
           </Link>
 
@@ -46,10 +46,6 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
-            
-            <button className="px-5 py-2 text-sm font-semibold text-background bg-primary rounded-lg hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all transform hover:-translate-y-0.5">
-              Conectar Wallet
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,9 +80,6 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
-             <button className="w-full mt-4 px-5 py-3 text-sm font-bold text-background bg-primary rounded-lg">
-              Conectar Wallet
-            </button>
           </div>
         </div>
       )}
