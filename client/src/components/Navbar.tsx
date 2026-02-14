@@ -25,7 +25,7 @@ export function Navbar() {
               <img src={logo} alt="Logo" className="h-full w-full object-cover" />
             </div>
             <span className="font-display text-xl font-bold tracking-tight text-white">
-              Sergio<span className="text-blue-500">Chain</span> DePIN
+              Sergio<span className="text-secondary">Chain</span> DePIN
             </span>
           </Link>
 

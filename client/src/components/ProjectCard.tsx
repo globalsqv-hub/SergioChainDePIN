@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="group block h-full">
+    <Link href={`/projects/${project.id}`} className="group block h-full">
       <div className="h-full glass-panel rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,240,255,0.15)] hover:border-primary/50 relative flex flex-col">
         
         {/* Glow effect on hover */}
@@ -66,13 +66,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
               <Badge variant="outline" className="border-white/10 text-muted-foreground hover:bg-white/5 hover:text-white transition-colors">
                 {project.category}
               </Badge>
-              <span className="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-1 transition-all">
-                Escaparate DePIN
+              <span className="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-1 group-hover:gap-2 transition-all">
+                Ver Detalles <ArrowUpRight className="w-3 h-3" />
               </span>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

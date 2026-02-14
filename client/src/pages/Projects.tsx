@@ -53,16 +53,19 @@ export default function Projects() {
             ))}
           </div>
 
-          <div className="flex items-center gap-3 w-full md:w-auto justify-center md:justify-start">
+          <div className="flex items-center gap-3 w-full md:w-auto">
             <div className="relative w-full md:w-64">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <Input 
                 placeholder="Buscar proyecto..." 
-                className="pl-10 bg-black/40 border-white/10 focus:border-primary/50 text-white placeholder:text-muted-foreground/50 rounded-xl pointer-events-none opacity-80"
+                className="pl-10 bg-black/40 border-white/10 focus:border-primary/50 text-white placeholder:text-muted-foreground/50 rounded-xl"
                 value={searchTerm}
-                readOnly
+                onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
+            <Button variant="outline" size="icon" className="border-white/10 bg-black/40 hover:bg-white/5 hover:text-primary">
+              <SlidersHorizontal className="w-4 h-4" />
+            </Button>
           </div>
         </div>
 
