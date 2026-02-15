@@ -19,16 +19,16 @@
   --popover: 220 35% 8%;
   --popover-foreground: 210 20% 98%;
   
-  /* Primary: Neon Cyan */
-  --primary: 180 100% 50%;      /* #00f0ff */
+  /* Primary: Neon Cyan (logo SC, circuitos, servidores) */
+  --primary: 187 100% 50%;      /* #00d4ff - Cyan eléctrico */
   --primary-foreground: 220 40% 4%;
   
-  /* Secondary: Neon Green */
-  --secondary: 157 100% 50%;    /* #00ff9d */
+  /* Secondary: Neon Green (líneas de red/datos del fondo) */
+  --secondary: 145 100% 50%;    /* #00ff80 - Verde eléctrico */
   --secondary-foreground: 220 40% 4%;
   
-  /* Accent: Electric Purple */
-  --accent: 157 100% 50%;       /* #a64aff - Adjusted for visibility */
+  /* Accent: Verde-cyan complementario */
+  --accent: 157 100% 50%;       /* #00ff9d */
   --accent-foreground: 220 40% 4%;
   
   /* Muted elements */
@@ -39,10 +39,10 @@
   --destructive: 0 100% 60%;
   --destructive-foreground: 210 20% 98%;
   
-  /* Borders: Subtle electric blue */
+  /* Borders: Sutil cyan/azul */
   --border: 215 25% 15%;
   --input: 215 25% 15%;
-  --ring: 180 100% 50%; /* Primary color for focus rings */
+  --ring: 187 100% 50%; /* Primary para focus rings */
   
   /* Radius */
   --radius: 0.5rem;
@@ -58,7 +58,7 @@
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-body);
     /* Fixed background image handling */
-    background-image: linear-gradient(to bottom, rgba(5, 10, 16, 0.92), rgba(5, 10, 16, 0.98)), url("@assets/fondo.svg");
+    background-image: linear-gradient(to bottom, rgba(5, 10, 16, 0.92), rgba(5, 10, 16, 0.98)), url("/Fondo1_1770920301492.png");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;

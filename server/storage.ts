@@ -37,7 +37,8 @@ export class DatabaseStorage implements IStorage {
     } else {
       whereClause = undefined;
     }
-    return await db.select().from(projects).where(whereClause);
+    const query = db.select().from(projects);
+    return whereClause ? await query.where(whereClause) : await query;
   }
 
   async getProject(id: number): Promise<Project | undefined> {

@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
-import logo from "@assets/logo.svg";
+import logo from "@assets/logo1_1770920301492.png";
 import { Cpu, Zap, Activity, Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -22,7 +22,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative h-10 w-10 overflow-hidden rounded-lg border border-primary/20 group-hover:border-primary/50 transition-colors">
-              <img src={logo} alt="Logo" className="h-full w-full object-cover" />
+              <img src={logo} alt="SergioChain DePIN" className="h-full w-full object-contain" />
             </div>
             <span className="font-display text-xl font-bold tracking-tight text-white">
               Sergio<span className="text-secondary">Chain</span> DePIN

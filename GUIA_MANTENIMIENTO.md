@@ -46,13 +46,13 @@ En el mismo archivo, verás el array `demoEarn`. Cada oportunidad tiene este for
 
 Las imágenes principales están en la carpeta `attached_assets` y se importan en el frontend. 
 
-- **Logo:** `attached_assets/logo.svg` (importado en `Navbar.tsx`)
-- **Fondo:** `attached_assets/fondo.svg` (usado en `client/src/index.css`)
+- **Logo:** `attached_assets/logo1_1770920301492.png` (importado en `Navbar.tsx`)
+- **Fondo:** `attached_assets/Fondo1_1770920301492.png` (usado en `client/src/index.css`)
 
-Reemplaza esos archivos por tus propias imágenes. Puedes usar `.svg` o `.jpg`; si cambias la extensión, actualiza la ruta en el código.
+Las imágenes siguen el tema: ciudad tecnológica, logo SC con circuitos en cyan, líneas de red en verde. Para cambiar diseño o paleta, reemplaza estos archivos y actualiza las rutas si cambias el nombre.
 
 ## 3. Estilos y Colores
-El tema "Cyberpunk" se define en `client/src/index.css` y las variables de color en `tailwind.config.ts`. Los colores principales son:
-- **Cian Neón:** `#00f0ff` (Primario)
-- **Verde Neón:** `#00ff9d` (Secundario)
-- **Azul SergioChain:** Se aplica mediante clases de Tailwind (ej. `text-blue-500`).
+El tema se define en `client/src/index.css` siguiendo las imágenes de marca. Colores principales:
+- **Cyan eléctrico:** `#00d4ff` (Primario - logo, circuitos)
+- **Verde eléctrico:** `#00ff80` (Secundario - líneas de red)
+- **Fondo oscuro:** Gris azulado muy oscuro para contraste
