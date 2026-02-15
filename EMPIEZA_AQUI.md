@@ -66,7 +66,7 @@ Para que cualquiera pueda entrar a tu página con un enlace (por ejemplo `https:
 
 5. Espera unos minutos. Al terminar te dará un **enlace** (por ejemplo `https://web-vista-doble.vercel.app`). Ese es el enlace público de tu página.
 
-**Si la página usa base de datos:** en el proyecto de Vercel ve a **Settings** → **Environment Variables** y añade las variables que te hayan indicado (por ejemplo `DATABASE_URL`). Luego haz un nuevo **Redeploy** desde la pestaña "Deployments".
+**Base de datos (opcional):** La página puede funcionar **sin configurar nada**: usa los datos que ya van en el código. Si más adelante quieres una base de datos en la nube (para guardar cambios), entonces en Vercel → **Settings** → **Environment Variables** añade `DATABASE_URL` y haz **Redeploy**.
 
 Cada vez que subas cambios a GitHub (paso 2), Vercel puede **actualizar solo** la web; en la configuración del proyecto puedes activar "Deploy when you push to GitHub".
 

@@ -1,13 +1,17 @@
 import type { Express } from "express";
 import type { Server } from "http";
-import { storage } from "./storage";
+import type { IStorage } from "./storage";
 import { api } from "@shared/routes";
 
 export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  // Seed data on startup
+  // Si no hay DATABASE_URL, usamos datos en memoria (sin base de datos en la nube)
+  const storage: IStorage = process.env.DATABASE_URL
+    ? (await import("./storage")).storage
+    : (await import("./storage-memory")).storage;
+
   await storage.seedData();
 
   app.get(api.projects.list.path, async (req, res) => {
