@@ -1,16 +1,30 @@
 import { useQuery } from "@tanstack/react-query";
 import { api, buildUrl } from "@shared/routes";
 
+/** Mapea categorías en español (UI) a inglés (base de datos) */
+const CATEGORY_MAP: Record<string, string> = {
+  Todos: "",
+  Sensores: "Sensors",
+  Computación: "Compute",
+  WiFi: "Wireless",
+  Almacenamiento: "Storage",
+  IA: "AI",
+  "Ancho de banda": "Bandwidth",
+  Movilidad: "Mobility",
+  Conectividad: "Connectivity",
+  Recompensas: "Rewards",
+};
+
 // GET /api/projects
 export function useProjects(filters?: { category?: string; search?: string }) {
   const queryKey = [api.projects.list.path, filters?.category, filters?.search];
-  
+
   return useQuery({
     queryKey,
     queryFn: async () => {
-      // Build query string manually or use a helper if api.projects.list.input was strictly typed for query string conversion
       const params: Record<string, string> = {};
-      if (filters?.category && filters.category !== 'Todos') params.category = filters.category;
+      const dbCategory = filters?.category ? CATEGORY_MAP[filters.category] ?? filters.category : "";
+      if (dbCategory) params.category = dbCategory;
       if (filters?.search) params.search = filters.search;
       
       const queryString = new URLSearchParams(params).toString();

@@ -28,8 +28,8 @@
   --secondary-foreground: 220 40% 4%;
   
   /* Accent: Electric Purple */
-  --accent: 266 100% 64%;       /* #a64aff - Adjusted for visibility */
-  --accent-foreground: 210 20% 98%;
+  --accent: 157 100% 50%;       /* #a64aff - Adjusted for visibility */
+  --accent-foreground: 220 40% 4%;
   
   /* Muted elements */
   --muted: 215 25% 15%;
@@ -58,7 +58,7 @@
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-body);
     /* Fixed background image handling */
-    background-image: linear-gradient(to bottom, rgba(5, 10, 16, 0.92), rgba(5, 10, 16, 0.98)), url("@assets/Fondo1_1770920301492.jpg");
+    background-image: linear-gradient(to bottom, rgba(5, 10, 16, 0.92), rgba(5, 10, 16, 0.98)), url("@assets/fondo.svg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;

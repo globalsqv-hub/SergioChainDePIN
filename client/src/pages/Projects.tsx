@@ -7,7 +7,18 @@ import { Button } from "@/components/ui/button";
 import { Search, SlidersHorizontal, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
 
-const CATEGORIES = ["Todos", "Sensores", "Computación", "WiFi", "Almacenamiento", "IA"];
+const CATEGORIES = [
+  "Todos",
+  "Sensores",
+  "Computación",
+  "WiFi",
+  "Almacenamiento",
+  "IA",
+  "Ancho de banda",
+  "Movilidad",
+  "Conectividad",
+  "Recompensas",
+];
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("Todos");

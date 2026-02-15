@@ -14,6 +14,7 @@ export const projects = pgTable("projects", {
   marketCap: text("market_cap"), // e.g., "$50M"
   imageUrl: text("image_url").notNull(),
   featured: boolean("featured").default(false),
+  referralUrl: text("referral_url"), // Enlace de afiliado opcional
 });
 
 // Tabla de Oportunidades de Ganancia (como en depinhub.io/earn)

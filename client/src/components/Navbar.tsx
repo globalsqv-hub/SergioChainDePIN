@@ -1,6 +1,6 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
-import logo from "@assets/logo1_1770920301492.jpg";
+import logo from "@assets/logo.svg";
 import { Cpu, Zap, Activity, Menu, X } from "lucide-react";
 import { useState } from "react";
 

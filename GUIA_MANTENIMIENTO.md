@@ -11,7 +11,7 @@ Los datos de los proyectos y las oportunidades de ganancias se encuentran en el 
 Busca la función `seedData()` dentro de `server/storage.ts`. Verás un array llamado `demoProjects`.
 
 Cada proyecto tiene este formato:
-```typescript
+```typescript 
 {
   name: "Nombre del Proyecto",
   slug: "nombre-unico",
@@ -21,9 +21,12 @@ Cada proyecto tiene este formato:
   token: "TICKER",
   marketCap: "$100M",
   imageUrl: "URL de la imagen",
-  featured: true // true para que aparezca destacado
+  featured: true, // true para que aparezca destacado
+  referralUrl: "https://..." // opcional: enlace de afiliado/referido
 }
 ```
+
+**Importante:** Si modificas el esquema de la base de datos (p. ej. nuevas columnas en `shared/schema.ts`), ejecuta `npm run db:push` para aplicar los cambios.
 
 ### Modificar Oportunidades de Ganancia
 En el mismo archivo, verás el array `demoEarn`. Cada oportunidad tiene este formato:
@@ -43,10 +46,10 @@ En el mismo archivo, verás el array `demoEarn`. Cada oportunidad tiene este for
 
 Las imágenes principales están en la carpeta `attached_assets` y se importan en el frontend. 
 
-- **Fondo:** Se gestiona en el componente de fondo (usualmente `App.tsx` o un componente Layout).
-- **Logo:** Se encuentra en el componente de navegación (Navbar).
+- **Logo:** `attached_assets/logo.svg` (importado en `Navbar.tsx`)
+- **Fondo:** `attached_assets/fondo.svg` (usado en `client/src/index.css`)
 
-Si deseas cambiar las imágenes, simplemente reemplaza los archivos en `attached_assets` con el mismo nombre o actualiza las rutas de importación en el código.
+Reemplaza esos archivos por tus propias imágenes. Puedes usar `.svg` o `.jpg`; si cambias la extensión, actualiza la ruta en el código.
 
 ## 3. Estilos y Colores
 El tema "Cyberpunk" se define en `client/src/index.css` y las variables de color en `tailwind.config.ts`. Los colores principales son:
